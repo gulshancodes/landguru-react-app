@@ -1,0 +1,50 @@
+#faq {
+    @include flex(center);
+}
+
+.accordion {
+    width: 900px;
+}
+
+.accordion__button {
+    position: relative;
+    background: #fff;
+
+    &:hover {
+        background-color: #eee;
+    }
+
+    &::before {
+        content: '+';
+        @include dimension(20px, 20px);
+        margin-right: 0;
+        border-bottom: unset;
+        border-right: unset;
+        transform: unset;
+        font-size: 28px;
+        @include centered;
+        line-height: 14px;
+        background: $green-color;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        top: auto;
+        left: auto;
+    }
+
+    h4 {
+        margin-left: 40px;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: -0.5px;
+    }
+}
+
+.accordion__panel {
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: $dark-gray-color;
+    }
+}

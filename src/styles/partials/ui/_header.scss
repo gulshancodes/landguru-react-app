@@ -1,0 +1,42 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    color: $dark-blue-color;
+    @include padding-y(14px, 14px);
+    @include transition(all, 0.2s);
+
+    &.sticky {
+        background-color: #fff;
+        box-shadow: 0px 25px 25px rgba(69, 88, 157, 0.08);
+    }
+}
+
+.navbar {
+    @include flex(space-between, center);
+}
+
+.nav_logo {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    @include flex();
+    gap: 10px;
+}
+
+.nav_links {
+    @include flex();
+    gap: 30px;
+
+    a {
+        opacity: 0.7;
+        font-weight: 500;
+        @include transition(opacity, 0.3s);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

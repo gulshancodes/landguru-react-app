@@ -1,0 +1,119 @@
+#features {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.features_wrapper {
+    @include grid-cols(2, 1fr, 50px);
+
+    .left_content {
+        position: relative;
+
+        .card {
+            position: absolute;
+            width: 230px;
+            height: 240px;
+            padding: 25px;
+            background: #FFFFFF;
+            box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.09);
+            border-radius: 10px;
+            @include centered;
+            text-align: center;
+            @include transition(all, 0.3s);
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.25);
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 50px;
+                letter-spacing: -1.5px;
+            }
+
+            p {
+                letter-spacing: -0.5px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            &:nth-child(1) {
+                top: 0;
+                left: 10%;
+
+                h2 {
+                    color: $dark-orange-color;
+                }
+            }
+
+            &:nth-child(2) {
+                top: -10%;
+                left: 50%;
+
+                h2 {
+                    color: $orange-color;
+                }
+            }
+
+            &:nth-child(3) {
+                top: 62%;
+                left: 10%;
+
+                h2 {
+                    color: $pink-color;
+                }
+            }
+
+            &:nth-child(4) {
+                top: 52%;
+                left: 50%;
+
+                h2 {
+                    color: $purple-color;
+                }
+            }
+        }
+    }
+
+    .right_content {
+        h6 {
+            letter-spacing: 2.1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 40px;
+            color: $dark-orange-color;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 55px;
+            letter-spacing: -1.5px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 42px;
+            color: $dark-blue-color;
+            @include margin-y(22px, 28px);
+        }
+    }
+
+    .scroll_down {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        cursor: pointer;
+        @include transition(transform, 0.3s);
+
+        &:hover {
+            transform: translateX(-50%) translateY(3px);
+        }
+    }
+}

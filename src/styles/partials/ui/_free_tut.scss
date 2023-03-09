@@ -1,0 +1,57 @@
+.free_tut_wrapper {
+    @include grid-cols(2, 1fr, 30px);
+    align-items: center;
+
+    .left_content {
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url(../../../../public/images/map.svg);
+            @include bg-cover;
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            @include dimension(100%, 100%);
+            z-index: -1;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+        }
+
+        .tuts_card {
+            @include dimension(400px)
+        }
+    }
+
+    .right_content {
+        h6 {
+            letter-spacing: 2.1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 40px;
+            color: $dark-orange-color;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 55px;
+            letter-spacing: -1.5px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 42px;
+            color: $dark-blue-color;
+            @include margin-y(22px, 28px);
+        }
+    }
+}

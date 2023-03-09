@@ -1,0 +1,60 @@
+@mixin dimension($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin margin-x($mLeft, $mRight) {
+    margin-left: $mLeft;
+    margin-right: $mRight;
+}
+
+@mixin margin-y($mTop, $mBottom) {
+    margin-top: $mTop;
+    margin-bottom: $mBottom;
+}
+
+@mixin padding-x($pLeft, $pRight) {
+    padding-left: $pLeft;
+    padding-right: $pRight;
+}
+
+@mixin padding-y($pTop, $pBottom) {
+    padding-top: $pTop;
+    padding-bottom: $pBottom;
+}
+
+@mixin centered {
+    display: grid;
+    place-items: center;
+}
+
+@mixin flex($justCont: flex-start, $alignItm: flex-start) {
+    display: flex;
+    justify-content: $justCont;
+    align-items: $alignItm;
+}
+
+@mixin grid-cols($colsCount, $colsWidth, $gap) {
+    grid-template-columns: repeat($colsCount, $colsWidth);
+    gap: $gap;
+}
+
+@mixin img-fit {
+    @include dimension(100%, 100%);
+    object-fit: cover;
+}
+
+@mixin bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin transition($prop: all, $duration, $timeFn: ease) {
+    transition: $prop $duration $timeFn;
+}

@@ -1,0 +1,19 @@
+/* Base */
+
+@import "./partials/base/variables";
+@import "./partials/base/mixins";
+@import "./partials/base/reset";
+@import "./partials/base/common";
+
+/* UI */
+@import "./partials/ui/header";
+@import "./partials/ui/course";
+@import "./partials/ui/faq";
+@import "./partials/ui/features";
+@import "./partials/ui/free_tut";
+@import "./partials/ui/tuts_card";
+@import "./partials/ui/works";
+@import "./partials/ui/ready";
+@import "./partials/ui/hero";
+@import "./partials/ui/price";
+@import "./partials/ui/footer";

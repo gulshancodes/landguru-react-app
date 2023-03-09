@@ -1,0 +1,35 @@
+#works {
+    // height: 700px;
+    background: $gradient3;
+}
+
+.works_wrapper {
+    @include grid-cols(4, 1fr, 80px);
+
+    .card {
+        h4 {
+            font-weight: 400;
+            font-size: 30px;
+            background: #ffffff;
+            width: 72px;
+            height: 72px;
+            @include centered;
+            border-radius: 50%;
+            box-shadow: 0px 14px 20px rgba(76, 119, 171, 0.1);
+        }
+
+        h5 {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 155%;
+            @include margin-y(25px, 15px);
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 26px;
+            color: $dark-gray-color;
+        }
+    }
+}

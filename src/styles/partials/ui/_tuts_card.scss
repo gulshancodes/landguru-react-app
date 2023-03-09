@@ -1,0 +1,25 @@
+.tuts_card {
+    box-shadow: 0px 15px 50px rgba(69, 88, 157, 0.1);
+
+    figure {
+        position: relative;
+
+        .play_icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .info {
+        padding: 30px;
+
+        h4 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 30px;
+            @include margin-y(6px, 15px);
+        }
+    }
+}

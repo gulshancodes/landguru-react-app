@@ -1,0 +1,46 @@
+.course_wrapper {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+
+    .card {
+        @include flex(space-evenly, center);
+        background: #FFFFFF;
+        box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
+        border-radius: 10px;
+        width: 1200px;
+        height: 170px;
+
+        .play_icon {
+            background-color: $light-orange-color;
+            opacity: 1;
+
+            svg {
+                color: $dark-orange-color;
+            }
+        }
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 42px;
+        color: $light-gray-color;
+    }
+
+    .btn {
+        background-color: $green-color;
+        color: #FFFFFF;
+        @include transition(transform, 0.3s);
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+}

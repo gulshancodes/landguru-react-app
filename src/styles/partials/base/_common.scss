@@ -1,0 +1,153 @@
+.container {
+    max-width: 1320px;
+    @include mx-auto;
+    @include padding-x(12px, 12px);
+}
+
+.wrapper {
+    display: grid;
+}
+
+.btn {
+    display: inline-block;
+    background-color: $light-orange-color;
+    color: $dark-orange-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    @include transition(all, 0.3s);
+
+    &:hover {
+        background-color: $dark-orange-color;
+        color: #fff;
+    }
+}
+
+.section {
+    @include padding-y(80px, 80px);
+}
+
+.ratings {
+    @include flex($alignItm: center);
+    gap: 14px;
+
+    span {
+        &:last-child {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+
+}
+
+.star {
+    color: $yellow-color;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 4.8px;
+
+    svg {
+        vertical-align: unset;
+    }
+}
+
+.views {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $dark-gray-color;
+    @include flex($alignItm: center);
+    gap: 8px;
+
+    span {
+        svg {
+            @include dimension(20px, 20px);
+            color: $mid-gray-color;
+        }
+    }
+}
+
+.section_head {
+    @include margin-y(30px, 60px);
+    text-align: center;
+
+    h5 {
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 40px;
+        color: $dark-orange-color;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 55px;
+        letter-spacing: -1.5px;
+    }
+}
+
+.play_icon {
+    background: rgba($color: #FFFFFF, $alpha: 0.4);
+    border-radius: 50%;
+    @include dimension(80px, 80px);
+    @include centered;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba($color: #000000, $alpha: 0.08);
+    @include transition(box-shadow, 0.2s);
+
+    &:hover {
+        box-shadow: 1px 1px 8px rgba($color: #000000, $alpha: 0.4);
+    }
+
+    svg {
+        color: #FFFFFF;
+        @include dimension(30px, 30px);
+        transform: translateX(10%);
+        filter: drop-shadow(1px 1px 5px rgba($color: #000000, $alpha: 0.08));
+    }
+}
+
+.back_top {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    @include transition(all, 0.4s);
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    button {
+        color: $dark-orange-color;
+        font-size: 40px;
+        @include transition(color, 0.3s);
+
+        &:hover {
+            color: $orange-color;
+        }
+    }
+}
+
+
+.swiper {
+    user-select: none;
+}
+
+.swiper-pagination-bullet {
+    background: $orange-color;
+}
+
+.swiper-pagination-bullet-active {
+    background: $orange-color;
+}

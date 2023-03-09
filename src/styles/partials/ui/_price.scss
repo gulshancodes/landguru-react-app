@@ -1,0 +1,75 @@
+.price_wrapper {
+    @include grid-cols(2, 1fr, 0);
+    place-items: center;
+
+    .card {
+        border-radius: 10px;
+        width: 480px;
+        padding: 40px 40px;
+
+        &:nth-child(2) {
+            border: 2.5px solid $green-color;
+
+            .tag {
+                background: $dark-orange-color;
+                color: #fff;
+                border-radius: 3px;
+                padding: 5px 10px;
+                display: inline-block;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 28px;
+                letter-spacing: -0.14px;
+            }
+        }
+
+        .head {
+            margin-top: 20px;
+            @include flex(space-between, center);
+
+            h5 {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 29px;
+                letter-spacing: -0.55px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                display: flex;
+                align-items: center;
+                color: $dark-gray-color;
+            }
+
+            .price {
+
+                h4 {
+                    color: $green-color;
+                    font-weight: 700;
+                    font-size: 26px;
+                    line-height: 34px;
+                    letter-spacing: -0.55px;
+                }
+            }
+        }
+
+        ul {
+            @include margin-y(50px, 60px);
+            display: grid;
+            gap: 20px;
+
+            li {
+                @include flex($alignItm: center);
+                gap: 10px;
+
+                span {
+                    &:first-child {
+                        color: $green-color;
+                    }
+                }
+            }
+        }
+    }
+}
